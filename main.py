@@ -7,10 +7,12 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.storage.memory import MemoryStorage
 from food import get_food_info
 from weather import get_current_weather
-from config import weather_url, weather_key
+from config import weather_url, weather_key, proxy_key, PROXY_URL
 
 
-bot = Bot(token="7206703634:AAF93vZytKvBTMWexu34HG8HaAvUpxcEKMw")
+bot = Bot(token="7206703634:AAF93vZytKvBTMWexu34HG8HaAvUpxcEKMw",
+          proxy=PROXY_URL
+          )
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 
